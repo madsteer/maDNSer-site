@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — maDNSer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:        #0c0f14;
+      --surface:   #13181f;
+      --border:    #1e2630;
+      --accent:    #4fa3e0;
+      --accent-dim:#2a5c80;
+      --text:      #d4dce8;
+      --muted:     #64748b;
+      --heading:   #eaf2ff;
+      --tag-bg:    #0e2033;
+      --tag-text:  #7ec8f5;
+      --safe:      #2dd4a0;
+      --safe-bg:   #07231a;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 3rem 2rem 2.5rem;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent-dim), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: -0.5px;
+      flex-shrink: 0;
+    }
+
+    .app-name {
+      font-family: 'DM Mono', monospace;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--heading);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ── Intro badge ── */
+    .summary-banner {
+      max-width: 760px;
+      margin: 2.5rem auto 0;
+      padding: 0 2rem;
+    }
+
+    .banner-inner {
+      background: var(--safe-bg);
+      border: 1px solid #1a4a37;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .banner-icon {
+      font-size: 1.4rem;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .banner-text {
+      font-size: 0.95rem;
+      color: var(--safe);
+      line-height: 1.65;
+    }
+
+    .banner-text strong {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+      font-size: 1rem;
+    }
+
+    /* ── Main layout ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 2rem 6rem;
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.55rem;
+      color: var(--heading);
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: var(--text);
+      margin-bottom: 0.9rem;
+      font-weight: 300;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    /* ── Tag pills ── */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent-dim);
+      white-space: nowrap;
+    }
+
+    .tag.muted {
+      background: #111820;
+      color: var(--muted);
+      border-color: var(--border);
+    }
+
+    /* ── Data table ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .data-table thead tr {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .data-table th {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: left;
+      padding: 0.5rem 1rem 0.75rem 0;
+      font-weight: 400;
+    }
+
+    .data-table td {
+      padding: 0.75rem 1rem 0.75rem 0;
+      vertical-align: top;
+      color: var(--text);
+      font-weight: 300;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.5;
+    }
+
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .data-table td:first-child {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.82rem;
+      color: var(--accent);
+      white-space: nowrap;
+      padding-right: 2rem;
+    }
+
+    /* ── Inline code ── */
+    code {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.82em;
+      background: #101822;
+      color: var(--tag-text);
+      padding: 0.1em 0.45em;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    /* ── Highlight box ── */
+    .callout {
+      background: var(--surface);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.25rem;
+      margin-top: 1.1rem;
+      font-size: 0.92rem;
+      color: var(--text);
+      font-weight: 300;
+    }
+
+    /* ── Contact ── */
+    .contact-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--accent-dim);
+      padding-bottom: 1px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .contact-link:hover {
+      color: #7fd0ff;
+      border-color: #7fd0ff;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-brand {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .footer-note {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 540px) {
+      header, main, .summary-banner, footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+      h1 { font-size: 1.8rem; }
+      .data-table td:first-child { white-space: normal; padding-right: 1rem; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-row">
+      <div class="logo-icon">DNS</div>
+      <span class="app-name">maDNSer</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective date: May 23, 2025 &nbsp;·&nbsp; macOS App</p>
+  </header>
+
+  <div class="summary-banner">
+    <div class="banner-inner">
+      <div class="banner-icon">🔒</div>
+      <div class="banner-text">
+        <strong>The short version</strong>
+        maDNSer does not collect, transmit, or store any personal information on external servers. Everything stays on your Mac. No accounts. No analytics. No ads.
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- 1. Introduction -->
+    <section>
+      <div class="section-label">01</div>
+      <h2>Introduction</h2>
+      <p>
+        maDNSer ("the App", "we", "our") is a macOS application for managing Dynamic DNS (DDNS) records.
+        This Privacy Policy explains what information the App accesses, how it is used, and — crucially — what never leaves your device.
+      </p>
+      <p>
+        We built maDNSer with a privacy-first design. There are no user accounts, no registration requirements, and no telemetry of any kind.
+      </p>
+    </section>
+
+    <!-- 2. Data We Do NOT Collect -->
+    <section>
+      <div class="section-label">02</div>
+      <h2>Information We Do Not Collect</h2>
+      <p>maDNSer never collects, stores remotely, or transmits any of the following:</p>
+      <div class="tags">
+        <span class="tag muted">Personal identifiers</span>
+        <span class="tag muted">Names or email addresses</span>
+        <span class="tag muted">Device identifiers</span>
+        <span class="tag muted">IP address logs</span>
+        <span class="tag muted">Usage analytics</span>
+        <span class="tag muted">Crash reports (to us)</span>
+        <span class="tag muted">Advertising IDs</span>
+        <span class="tag muted">Location data</span>
+        <span class="tag muted">Keystroke or clipboard data</span>
+      </div>
+      <div class="callout">
+        We have no server that receives data from your installation of maDNSer. We are technically incapable of identifying who you are or how you use the App.
+      </div>
+    </section>
+
+    <!-- 3. Local Storage -->
+    <section>
+      <div class="section-label">03</div>
+      <h2>Data Stored Locally on Your Mac</h2>
+      <p>
+        The App stores the following data exclusively on your device. It is never transmitted to us.
+      </p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Storage</th>
+            <th>What is stored</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Keychain</td>
+            <td>DDNS provider API keys and credentials you configure</td>
+            <td>Authenticate with your DDNS provider on your behalf</td>
+          </tr>
+          <tr>
+            <td>UserDefaults</td>
+            <td>App preferences (update intervals, provider settings, UI state)</td>
+            <td>Persist your configuration between launches</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:1rem;">
+        macOS Keychain storage is encrypted and sandboxed. Only maDNSer can read the credentials it writes.
+        You can review or delete all stored data at any time by removing the App and clearing its Keychain entries via <strong>Keychain Access</strong>.
+      </p>
+    </section>
+
+    <!-- 4. Network Requests -->
+    <section>
+      <div class="section-label">04</div>
+      <h2>Network Requests</h2>
+      <p>
+        maDNSer makes outbound network requests only for its core DNS-update function. It contacts exactly two categories of external services:
+      </p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Destination</th>
+            <th>Data sent</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Your DDNS providers</td>
+            <td>Your current public IP address + your API credentials</td>
+            <td>Update your DNS records as configured</td>
+          </tr>
+          <tr>
+            <td>ipify.org</td>
+            <td>No data — a plain GET request</td>
+            <td>Determine your current public IP address</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout">
+        These requests are initiated solely by you, on your schedule, to services you configure.
+        No other network requests are made. The App does not phone home to any Anthropic, maDNSer, or developer-owned server.
+      </div>
+      <p style="margin-top:1rem;">
+        Please review the privacy policies of your chosen DDNS providers and <a class="contact-link" href="https://www.ipify.org" target="_blank" rel="noopener">ipify.org</a>
+        independently, as we have no control over how they handle incoming requests.
+      </p>
+    </section>
+
+    <!-- 5. Subscriptions & Payments -->
+    <section>
+      <div class="section-label">05</div>
+      <h2>Subscriptions &amp; Payments</h2>
+      <p>
+        maDNSer offers optional in-app subscriptions managed entirely through <strong>Apple StoreKit</strong> and the Mac App Store.
+      </p>
+      <div class="tags">
+        <span class="tag">Apple handles all payment data</span>
+        <span class="tag">We never see your card details</span>
+        <span class="tag">No billing info stored by the App</span>
+      </div>
+      <p style="margin-top:1rem;">
+        We receive only an anonymous StoreKit receipt that confirms whether a subscription is active.
+        We cannot see your name, payment method, Apple ID, or any other billing information.
+        All financial data is governed by <a class="contact-link" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.
+      </p>
+    </section>
+
+    <!-- 6. Third-Party SDKs -->
+    <section>
+      <div class="section-label">06</div>
+      <h2>Third-Party SDKs &amp; Analytics</h2>
+      <p>
+        maDNSer contains <strong>no third-party SDKs</strong>, advertising frameworks, analytics libraries, or crash-reporting services.
+      </p>
+      <div class="tags">
+        <span class="tag muted">No Firebase</span>
+        <span class="tag muted">No Mixpanel</span>
+        <span class="tag muted">No Sentry</span>
+        <span class="tag muted">No Google Analytics</span>
+        <span class="tag muted">No advertising networks</span>
+        <span class="tag muted">No tracking SDKs</span>
+      </div>
+      <p style="margin-top:1rem;">
+        Apple may collect aggregate, anonymized App Store analytics (downloads, crashes) if you have opted in to sharing with developers in your macOS settings.
+        We have no control over this data and it is covered by Apple's own privacy policy.
+      </p>
+    </section>
+
+    <!-- 7. Children's Privacy -->
+    <section>
+      <div class="section-label">07</div>
+      <h2>Children's Privacy</h2>
+      <p>
+        maDNSer does not knowingly collect any information from anyone, including children under the age of 13.
+        Because we collect no data whatsoever, the App poses no heightened risk to minors.
+      </p>
+    </section>
+
+    <!-- 8. Data Retention & Deletion -->
+    <section>
+      <div class="section-label">08</div>
+      <h2>Data Retention &amp; Deletion</h2>
+      <p>
+        All data associated with maDNSer lives exclusively on your Mac. To delete it completely:
+      </p>
+      <p>
+        <strong>1.</strong> Uninstall maDNSer from your Applications folder.<br/>
+        <strong>2.</strong> Open <strong>Keychain Access</strong> and search for <code>maDNSer</code> to remove any stored credentials.<br/>
+        <strong>3.</strong> Delete <code>~/Library/Preferences/</code> entries for maDNSer if desired.
+      </p>
+      <p>
+        After these steps, no data related to the App remains on your system, and no data ever existed on our servers.
+      </p>
+    </section>
+
+    <!-- 9. Changes -->
+    <section>
+      <div class="section-label">09</div>
+      <h2>Changes to This Policy</h2>
+      <p>
+        If we make material changes to this Privacy Policy, we will update the effective date at the top of this page and, where appropriate, provide notice within the App.
+        Continued use of the App after changes are posted constitutes your acceptance of the revised policy.
+      </p>
+      <p>
+        Given maDNSer's architecture — no accounts, no remote data — meaningful privacy changes are unlikely, but we commit to transparency if they occur.
+      </p>
+    </section>
+
+    <!-- 10. Contact -->
+    <section>
+      <div class="section-label">10</div>
+      <h2>Contact</h2>
+      <p>
+        Questions or concerns about this Privacy Policy? We'd like to hear from you.
+      </p>
+      <p>
+        <a class="contact-link" href="mailto:privacy@madnser.app">privacy@madnser.app</a>
+      </p>
+      <p style="margin-top:0.75rem; font-size:0.9rem; color: var(--muted);">
+        Replace the address above with your actual support email before publishing.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="footer-brand">maDNSer &nbsp;·&nbsp; macOS</span>
+    <span class="footer-note">© 2025 maDNSer. All rights reserved.</span>
+  </footer>
+
+</body>
+</html>
