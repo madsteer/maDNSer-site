@@ -525,15 +525,26 @@
     <section>
       <div class="section-label">10</div>
       <h2>Contact</h2>
+      <p>Questions about this policy? Either open a public issue at <a href="https://github.com/madsteer/maDNSer-site/issues">the maDNSer feedback repo</a> or for private/sensitive inquiries email:</p>      
       <p>
-        Questions or concerns about this Privacy Policy? We'd like to hear from you.
+        <a id="support-email" href="#" rel="noopener">enable JavaScript to reveal</a>
+        <noscript>
+          Email obscured — open an issue on GitHub instead, or copy the address from this image:
+          <img src="support-email.svg" alt="support email address" style="vertical-align: middle; height: 1.3em;">
+        </noscript>
       </p>
-      <p>
-        <a class="contact-link" href="mailto:privacy@madnser.app">privacy@madnser.app</a>
-      </p>
-      <p style="margin-top:0.75rem; font-size:0.9rem; color: var(--muted);">
-        Replace the address above with your actual support email before publishing.
-      </p>
+
+      <script>
+        (function() {
+          var local = 'madnser_support';
+          var domain = ['madsteer', 'com'].join('.');
+          var addr = local + '@' + domain;
+          var el = document.getElementById('support-email');
+          el.href = 'mailto:' + addr;
+          el.textContent = addr;
+          el.removeAttribute('rel');
+        })();
+      </script>
     </section>
 
   </main>

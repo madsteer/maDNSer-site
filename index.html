@@ -96,15 +96,41 @@ footer a { margin: 0 8px; }
 </div>
 
 <h2>Support</h2>
-<p>Found a bug, want to suggest a feature, or have a question about your configuration? Email us at <a href="mailto:madsteer@icloud.com">madsteer@icloud.com</a>. We try to read every message and reply within a few business days.</p>
+<p>maDNSer is open to public bug reports and feature requests. The fastest way to get help is to open an issue:</p>
+<p><a href="https://github.com/madsteer/maDNSer-site/issues/new/choose">
+  → Report an issue or request a feature on GitHub
+</a></p>
 
 <p>When reporting a bug, please include:</p>
 <ul>
   <li>Your macOS version</li>
-  <li>The maDNSer version (visible in the App Store or by right-clicking the app and choosing "Get Info")</li>
-  <li>Which DDNS provider you're using</li>
+  <li>The maDNSer version (App Store → Updates, or right-click the app in Finder → Get Info)</li>
+  <li>Which DDNS provider you're using (Dyn, OpenDNS, etc.)</li>
   <li>What you expected to happen vs. what actually happened</li>
+  <li>Whether the issue is reproducible or intermittent</li>
 </ul>
+
+<p>For sensitive issues that shouldn't be public (account credentials, subscription problems, etc.), use this email:</p>
+
+<p>
+  <a id="support-email" href="#" rel="noopener">enable JavaScript to reveal</a>
+  <noscript>
+    Email obscured — open an issue on GitHub instead, or copy the address from this image:
+    <img src="support-email.svg" alt="support email address" style="vertical-align: middle; height: 1.3em;">
+  </noscript>
+</p>
+
+<script>
+  (function() {
+    var local = 'madnser_support';
+    var domain = ['madsteer', 'com'].join('.');
+    var addr = local + '@' + domain;
+    var el = document.getElementById('support-email');
+    el.href = 'mailto:' + addr;
+    el.textContent = addr;
+    el.removeAttribute('rel');
+  })();
+</script>
 
 <h2>Frequently asked</h2>
 
